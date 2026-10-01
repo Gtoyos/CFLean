@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: >-
+  If you use this Lean formalization, please cite it as software. If you
+  refer to the results it formalizes, please cite the paper "Conflict-Freedom as a Progress Condition" (see "preferred-citation").
+title: "Conflict-Freedom as a Progress Condition: a Lean formalization"
+type: software
+authors:
+  - given-names: Guillermo
+    family-names: Toyos-Marfurt
+license: CC-BY-4.0
+date-released: "2026-10-01"
+keywords:
+  - Lean
+  - formal verification
+  - distributed computing
+  - shared memory
+  - progress conditions
+  - universal construction
+preferred-citation:
+  type: conference-paper
+  title: "Conflict-Freedom as a Progress Condition"
+  authors:
+    - given-names: Petr
+      family-names: Kuznetsov
+    - given-names: Pierre
+      family-names: Sutra
+    - given-names: Guillermo
+      family-names: Toyos-Marfurt
+  collection-title: "Proceedings of the 2026 ACM Symposium on Principles of Distributed Computing"
+  conference:
+    name: "PODC '26"
+    city: Egham
+    country: GB
+    date-start: "2026-07-06"
+    date-end: "2026-07-10"
+  publisher:
+    name: "Association for Computing Machinery"
+  year: 2026
+  doi: "10.1145/3796701.3815956"
+  keywords:
+    - Distributed computing
+    - Shared memory
+    - Progress conditions

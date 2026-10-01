@@ -1,0 +1,32 @@
+# Lean / Lake build output and dependencies
+/.lake
+
+# macOS
+.DS_Store
+
+# LaTeX: the manuscript's sources (main.tex, references.bib, quiver.sty and
+# figures/) are tracked explicitly; any other LaTeX file is ignored.
+*.tex
+*.cls
+*.sty
+*.bib
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.pdf
+*.run.xml
+*.snm
+*.spl
+*.synctex.gz
+*.toc
+*.vrb
