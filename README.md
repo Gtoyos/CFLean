@@ -1,29 +1,24 @@
 # Conflict-Freedom as a Progress Condition: a Lean Formalization
 
-A Lean 4 formalization of *Conflict-Freedom as a Progress Condition* [1], in the
-extended version included here as [`main.tex`](main.tex).
+A Lean 4 formalization of *Conflict-Freedom as a Progress Condition* [1] (extended version).
 
 It formalizes the model of the paper and proves every numbered result:
 
 - **Theorem 4.4.** Algorithm 1 is a weakly conflict-free universal construction.
 - **Lemma 6.2.** Algorithm 3 is a conflict-free universal construction.
-- **Theorem 4.3 and Lemma 6.1.** Both constructions are linearizable, for the
-  whole, possibly infinite, history of every run.
-- **Theorems 7.4 and 7.2** (conflict forgetting and conflict resolution). Every
+- **Theorem 4.3 and Lemma 6.1.** Both constructions are linearizable.
+- **Theorems 7.4 and 7.2.** Conflict forgetting and conflict resolution: every
   finite execution of Algorithm 1 (resp. 3) has a finite conflict-forgetting
   (resp. conflict-resolving) solo extension.
 - **Theorem 5.1 and Lemmas A.2 to A.8.** Algorithm 2 meets the GCA
   specification, and Solo agreement.
-- **Propositions 3.3 and 3.4, Lemmas 4.1, 4.2 and A.1** — the progress
+- **Propositions 3.3 and 3.4, Lemmas 4.1, 4.2 and A.1.** The progress
   hierarchy, the degenerate conflict relations, and the trace facts the
   constructions rest on.
 
 Algorithms 1 and 3 are proved correct over *any* GCA objects meeting the
 specification of §4.2, used as a black box, as the paper does; Algorithm 2 is
-proved to be one. The algorithms are also run as deterministic machines — for
-every client, every scheduler, and every resolution of the choices the paper
-leaves open — and every non-halting run is shown to be an execution the theorems
-cover.
+proved to be one.
 
 Every proof uses only Lean's standard axioms (`propext`, `Classical.choice`,
 `Quot.sound`), with no `sorry`.
