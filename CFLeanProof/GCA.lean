@@ -9,7 +9,7 @@ variable {State Op Response : Type} (obj : Object State Op Response) [DecidableE
 
 /-! ## Multisets of operations
 
-main.tex §4.1: "Let `ops(s)` denote the multiset over `O` defined by `s`."  A
+§4.1: "Let `ops(s)` denote the multiset over `O` defined by `s`."  A
 multiset over `O` is its multiplicity function `O → ℕ`; its union is the usual
 one, whose multiplicity is the maximum. -/
 
@@ -111,7 +111,7 @@ theorem occurs_iff_lt_ops [DecidableEq Op] {a : Op} {k : Nat} {t : obj.Trace} :
   unfold Occurs Object.ops
   rw [obj.traceResponses_length]
 
-/-- **Validity.**  Output traces contain only input operations — main.tex:
+/-- **Validity.**  Output traces contain only input operations
 `∀ i ∈ P_r, ops(t_i) ⊆ ⋃_{j ∈ P} ops(s_j)`, with `ops(s)` the multiset of
 operations of `s` (§4.1) and `⋃` the usual multiset union, whose multiplicity is
 the maximum (`Object.SubsetUnion`): every operation occurs in an output trace at
@@ -202,7 +202,7 @@ def UnguardedCommitment : Prop :=
   obj.Compatible h.Inputs → h.AllReturned →
     ∃ p s t, h.input p = some s ∧ h.output p = some (t, true) ∧ obj.TracePrefix s t
 
-/-- **Commitment**, as main.tex states it:
+/-- **Commitment**, as states it:
 `comp(⋃_{i∈P}{s_i}) ∧ (P = P_r ≠ ∅) ⟹ ∃ j ∈ P_r, (s_j ≤ t_j) ∧ (c_j = True)`,
 with `P ≠ ∅` read `∃ s, h.Inputs s` and `P = P_r` read `AllReturned`: if some
 process participates, the inputs are compatible and every call returns, then
