@@ -114,8 +114,8 @@ theorem count_le_one_of_nodup {x : List Op} (hx : x.Nodup) (a : Op) : x.count a 
 
 /-- **Prefix = sub-multiset**, over pairwise independent letters.
 
-This is the combinatorial core of the "only compatible traces are proposed"
-claims of main.tex: inside a set of commands that pairwise commute, the prefix
+This is the combinatorial core of the "only compatible traces are proposed": 
+inside a set of commands that pairwise commute, the prefix
 order on traces is exactly multiset containment.  Note that no duplicate-freedom
 hypothesis is needed once the independence hypothesis is read -- as it must be,
 see `Independent` -- as a statement about *distinct* commands: swapping two
@@ -256,8 +256,7 @@ theorem compatible_indexed_extensions (t : obj.Trace) (L : List ι) (rep : ι �
 /-- **The form used in the progress proofs.** `S = ⋃_{i ∈ L} { t · u_i · m_i }`
 is compatible whenever any two *distinct* commands occurring in the `u_i` and
 the `m_i` are independent.  This is literally the last line of
-the invariant-(I) argument of Lemma `\ref{lemma:UCV2isCF}` and of Theorem
-`\ref{th:cr}` in main.tex (and, with `m_i = [cmd_i]`, of Theorem `\WeakUCWCF`). -/
+the invariant-(I) argument (and, with `m_i = [cmd_i]`, of Theorem `\WeakUCWCF`). -/
 theorem compatible_round (t : obj.Trace) (L : List ι) (u m : ι → List Op)
     (hind : ∀ a ∈ L.flatMap (fun i => u i ++ m i),
       ∀ b ∈ L.flatMap (fun i => u i ++ m i), a ≠ b → obj.Independent a b) :
@@ -318,8 +317,6 @@ end Indexed
 end ConflictFreedom.Object
 
 namespace ConflictFreedom
-
-/-! ### Two witnesses backing the caveats reported on main.tex -/
 
 /-- "Increment and return the new value": a single command that conflicts with
 *itself*.  Consequently `Independent a a` is not free, and the manuscript's
