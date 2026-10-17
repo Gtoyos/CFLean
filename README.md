@@ -44,7 +44,7 @@ lake env lean CFLeanProof/Audit.lean
 [`CFLeanProof.lean`](CFLeanProof.lean). `KernelAudit.lean` fails if any file
 under `CFLeanProof/` is not imported, or if any project declaration uses an
 axiom beyond the three above; `Audit.lean` prints the axioms of each result
-stated in `Paper.lean`. CI runs all three. The development uses Lean 4.34.0 and its
+stated in `Paper.lean`. The development uses Lean 4.34.0 and its
 standard library only, pinned by `lean-toolchain`.
 
 ## The results
