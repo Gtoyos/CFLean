@@ -10,7 +10,7 @@ import CFLeanProof.TraceOccurrences
 # The paper's results
 
 Every numbered result of *Conflict-Freedom as a Progress Condition* (Kuznetsov,
-Sutra, Toyos-Marfurt; extended version, `main.tex`), stated in the paper's terms
+Sutra, Toyos-Marfurt; extended version), stated in the paper's terms
 and proved from the rest of the development. To check the formalization against
 the paper, read this file and the definitions it uses; each definition is
 restated here next to the paper's own wording.
