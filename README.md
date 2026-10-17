@@ -122,7 +122,6 @@ CFLeanProof/
   *Witness                  concrete runs showing the hypotheses have content
   Counterexamples           why the definitions read as they do
   Audit, KernelAudit        the axiom report and the module and axiom checks
-main.tex                    the paper, extended version
 MODEL.md                    the formal model, and how it corresponds to the paper
 ```
 
