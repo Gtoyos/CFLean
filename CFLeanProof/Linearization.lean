@@ -3,7 +3,7 @@ import CFLeanProof.TraceAlgebra
 /-! # Trace-level content of the linearizability arguments
 
 This module covers the purely trace-theoretic part of the proof of
-Theorem `theorem:weakUCLin` in `main.tex` (the construction of the representative
+Theorem `theorem:weakUCLin` in (the construction of the representative
 schedule `\hat t` from the chain of committed traces `t_0 \le t_1 \le … \le t_{r^*}`),
 together with the response-stability facts (`lemma:ret-trace-prefix`,
 `lemma:ret-trace-eq`) that make the resulting sequential history legal.  The same
@@ -62,7 +62,7 @@ theorem tracePrefix_chain (t : Nat → obj.Trace) (m : Nat) :
       · rw [Nat.le_antisymm hk h]
         exact obj.tracePrefix_refl _
 
-/-- **Chain representative with blocks** (main.tex, construction of `\hat t` in the
+/-- **Chain representative with blocks** (construction of `\hat t` in the
 proof of `theorem:weakUCLin`).  From a chain `t_0 = ε`, `t_{k+1} = t_k \cdot s_k`
 we extract *concrete* schedules `s_0, …, s_{m-1}`; their concatenation is a
 representative of `t m`, and the concatenation of the first `k` of them is a
@@ -315,7 +315,7 @@ theorem chain_representative_prefixes (t : Nat → obj.Trace) (m : Nat)
 
 /-! ### Stability of responses along the chain -/
 
-/-- **Response stability** (main.tex, `\ret^*(cmd(\Phi),s) = \ret^*(cmd(\Phi),t)` in
+/-- **Response stability** (`\ret^*(cmd(\Phi),s) = \ret^*(cmd(\Phi),t)` in
 the proof of `theorem:weakUCLin`; Lemma `lemma:ret-trace-prefix` chained along the
 prefix chain).  Once an occurrence exists in an intermediate committed trace, its
 response never changes. -/
@@ -342,7 +342,7 @@ theorem responses_occurrence [DecidableEq Op] (a : Op) (y z : List Op) (q : Stat
 /-- Positional form: if the letter at position `p` of a schedule `x` is `a`, then the
 `(x.take p).count a`-th occurrence of `a` has as response the value produced by
 `obj.step` from the state reached by the prefix `x.take p`.  This is the legality
-of the sequential history `S_{\hat t}` of main.tex. -/
+of the sequential history `S_{\hat t}` -/
 theorem responses_getElem_occurrence [DecidableEq Op] (a : Op) (x : List Op) (q : State)
     (p : Nat) (hp : p < x.length) (ha : x[p] = a) :
     (obj.responses a x q)[(x.take p).count a]? =
